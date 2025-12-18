@@ -12,8 +12,10 @@ const App = () => {
     successDuration: 1000,
   });
 
+  const [language, setLanguage] = useState("en-IN");
+
   const startListening = () =>
-    SpeechRecognition.startListening({ continuous: true, language: "en-IN" });
+    SpeechRecognition.startListening({ continuous: true, language });
   const { transcript, browserSupportsSpeechRecognition } =
     useSpeechRecognition();
 
@@ -31,6 +33,15 @@ const App = () => {
 
       <div className="main-content" onClick={() => setTextToCopy(transcript)}>
         {transcript}
+      </div>
+
+      <div className="language-selector">
+        <label>Select Language:</label>
+        <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <option value="en-IN">English</option>
+          <option value="mr-IN">Marathi</option>
+          <option value="hi-IN">Hindi</option>
+        </select>
       </div>
 
       <div className="btn-style">
