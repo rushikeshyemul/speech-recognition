@@ -47,6 +47,35 @@ p {
   background: #f1f1f1;
 }
 
+.language-selector {
+  margin-bottom: 20px;
+}
+
+.language-selector label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.language-selector select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 200px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.language-selector select:focus {
+  outline: none;
+  border-color: #32cd32;
+  box-shadow: 0 0 5px rgba(50, 205, 50, 0.5);
+}
+
 .btn-style button {
   background-color: #32cd32; /* Light green */
   color: white;
